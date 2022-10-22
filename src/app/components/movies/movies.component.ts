@@ -8,7 +8,7 @@ import {FilmsService} from "../../services/movies.service";
 })
 export class MoviesComponent implements OnInit {
 
-  movies: [] = [];
+  movies: any[] = [];
   movieCount!: number;
 
   constructor(
@@ -17,9 +17,8 @@ export class MoviesComponent implements OnInit {
 
   ngOnInit(): void {
    this.moviesService.getFilms().subscribe(movies => {
-      this.movies = movies.results;
+    this.movies = movies.results;
       this.movieCount = movies.count;
     })
   }
-
 }
