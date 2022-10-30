@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-character',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CharacterComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+  ) {}
 
   ngOnInit(): void {
+    this.route.paramMap.subscribe(paramMap => {
+      const id = paramMap.get('episode_id');
+      console.log(id);
+    });
   }
-
 }

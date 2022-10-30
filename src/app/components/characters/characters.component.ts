@@ -8,7 +8,7 @@ import { CharactersService } from "../../services/characters.service";
 })
 export class CharactersComponent implements OnInit {
 
-  charactersArray: any[] = [];
+  characters: any[] = [];
   characterCount!: number;
 
   constructor(
@@ -19,7 +19,7 @@ export class CharactersComponent implements OnInit {
     for (let pageNumbers = 1; pageNumbers <= 9; pageNumbers++) {
       this.charactersService.getCharacters(pageNumbers).subscribe(characters => {
         this.characterCount =+ characters.count;
-        characters.results.map((character: any) => this.charactersArray.push(character));
+        characters.results.map((character: any) => this.characters.push(character));
       });
     }
   }

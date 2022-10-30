@@ -11,6 +11,7 @@ import {MatCardModule} from "@angular/material/card";
 import {MatButtonModule} from "@angular/material/button";
 import { MovieComponent } from './components/movie/movie.component';
 import { CharacterComponent } from './components/character/character.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CharacterComponent } from './components/character/character.component';
     MoviesComponent,
     CharactersComponent,
     MovieComponent,
-    CharacterComponent
+    CharacterComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
