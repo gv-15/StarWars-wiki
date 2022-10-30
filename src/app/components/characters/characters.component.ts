@@ -1,26 +1,42 @@
 import { Component, OnInit } from '@angular/core';
-import { CharactersService } from "../../services/characters.service";
+import { CharactersService } from '../../services/characters.service';
+import { PageEvent } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-characters',
   templateUrl: './characters.component.html',
-  styleUrls: ['./characters.component.scss']
+  styleUrls: ['./characters.component.scss'],
 })
 export class CharactersComponent implements OnInit {
-
   characters: any[] = [];
   characterCount!: number;
+  //Paginator
+  length = 87;
+  pageSize = 5;
+  pageSizeOptions: number[] = [5, 10];
 
-  constructor(
-    private charactersService: CharactersService
-  ) { }
+  // MatPaginator Output
+  pageEvent!: PageEvent;
+
+  constructor(private charactersService: CharactersService) {}
 
   ngOnInit(): void {
     for (let pageNumbers = 1; pageNumbers <= 9; pageNumbers++) {
-      this.charactersService.getCharacters(pageNumbers).subscribe(characters => {
-        this.characterCount =+ characters.count;
-        characters.results.map((character: any) => this.characters.push(character));
-      });
+      this.charactersService
+        .getCharacters(pageNumbers)
+        .subscribe((characters) => {
+          this.characterCount = +characters.count;
+          characters.results.map((character: any) =>
+            this.characters.push(character)
+          );
+        });
+    }
+  }
+  setPageSizeOptions(setPageSizeOptionsInput: string) {
+    if (setPageSizeOptionsInput) {
+      this.pageSizeOptions = setPageSizeOptionsInput
+        .split(',')
+        .map((str) => +str);
     }
   }
 }

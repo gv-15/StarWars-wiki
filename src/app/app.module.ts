@@ -14,7 +14,7 @@ import { CharacterComponent } from './components/character/character.component';
 import { HomeComponent } from './components/home/home.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MAT_TOOLTIP_DEFAULT_OPTIONS, MatTooltipModule } from '@angular/material/tooltip';
-
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 
 @NgModule({
@@ -35,6 +35,7 @@ import { MAT_TOOLTIP_DEFAULT_OPTIONS, MatTooltipModule } from '@angular/material
     MatButtonModule,
     MatIconModule,
     MatTooltipModule,
+    MatPaginatorModule
   ],
   providers: [
     { provide: MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: { showDelay: 100 } },
