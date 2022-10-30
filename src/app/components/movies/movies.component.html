@@ -14,7 +14,7 @@
         </p>
       </mat-card-content>
       <mat-card-actions>
-        <button mat-stroked-button>View details</button>
+        <button mat-stroked-button type="button" [routerLink]="['/movie', movie.episode_id ]">View details</button>
       </mat-card-actions>
     </mat-card>
   </div>
