@@ -4,23 +4,28 @@ import {MovieComponent} from "./components/movie/movie.component";
 import {MoviesComponent} from "./components/movies/movies.component";
 import {CharacterComponent} from "./components/character/character.component";
 import {CharactersComponent} from "./components/characters/characters.component";
+import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
   {
+    path: '',
+    component: HomeComponent
+  },
+  {
     path: 'movies',
-    component: MoviesComponent,
+    component: MoviesComponent
   },
   {
     path: 'movie/:episode_id',
-    component: MovieComponent,
+    component: MovieComponent
   },
   {
     path: 'character/:id',
-    component: CharacterComponent,
+    component: CharacterComponent
   },
   {
-    path: '',
-    component: CharactersComponent,
+    path: 'characters',
+    component: CharactersComponent
   }
 ];
 
