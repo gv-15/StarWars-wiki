@@ -8,6 +8,7 @@ import { PageEvent } from '@angular/material/paginator';
   styleUrls: ['./characters.component.scss'],
 })
 export class CharactersComponent implements OnInit {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   characters: any[] = [];
   characterCount!: number;
   //Paginator
@@ -26,6 +27,7 @@ export class CharactersComponent implements OnInit {
         .getCharacters(pageNumbers)
         .subscribe((characters) => {
           this.characterCount = +characters.count;
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           characters.results.map((character: any) =>
             this.characters.push(character)
           );

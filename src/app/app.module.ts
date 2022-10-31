@@ -16,7 +16,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MAT_TOOLTIP_DEFAULT_OPTIONS, MatTooltipModule } from '@angular/material/tooltip';
 import { MatPaginatorModule } from '@angular/material/paginator';
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,11 +34,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatButtonModule,
     MatIconModule,
     MatTooltipModule,
-    MatPaginatorModule
+    MatPaginatorModule,
   ],
-  providers: [
-    { provide: MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: { showDelay: 100 } },
-  ],
+  providers: [{ provide: MAT_TOOLTIP_DEFAULT_OPTIONS, useValue: { showDelay: 100 } }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

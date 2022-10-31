@@ -4,7 +4,6 @@
 
 export const environment = {
   production: false,
-  appname: "Star Wars Wiki",
-  URL_SWAPI : 'https://swapi.py4e.com/api/'
+  appname: 'Star Wars Wiki',
+  URL_SWAPI: 'https://swapi.py4e.com/api/',
 };
-
