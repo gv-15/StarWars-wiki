@@ -1,20 +1,25 @@
 <div class="container">
-  <button
-    mat-icon-button
-    matTooltip="Go to movies"
-    color="primary"
-    aria-label="Movies"
-    [routerLink]="['/movies']"
-  >
-    <mat-icon>movie</mat-icon>
-  </button>
-  <button
-    mat-icon-button
-    matTooltip="Go to characters"
-    color="primary"
-    aria-label="Characters"
-    [routerLink]="['/characters']"
-  >
-    <mat-icon>person</mat-icon>
-  </button>
+  <div class="action-buttons">
+    <button
+      style="margin-right: 30px"
+      class="router-button"
+      mat-icon-button
+      matTooltip="Go to movies"
+      color="primary"
+      aria-label="Movies"
+      [routerLink]="['/movies']"
+    >
+      <mat-icon>movie</mat-icon>
+    </button>
+    <button
+      class="router-button"
+      mat-icon-button
+      matTooltip="Go to characters"
+      color="primary"
+      aria-label="Characters"
+      [routerLink]="['/characters']"
+    >
+      <mat-icon>person</mat-icon>
+    </button>
+  </div>
 </div>
