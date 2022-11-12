@@ -7,23 +7,11 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  align-items: center;
+  align-items: flex-start;
 
   .star-wars {
     display: flex;
     width: 500px;
+    margin-top: 8rem;
   }
-
-  .action-buttons {
-    height: 60%;
-   }
 }
-
-.router-button {
-  transition: all .5s ease-in-out;
-  &:hover {
-    transition: all .5s ease-in-out;
-    transform: scale(2);
-    }
-}
-

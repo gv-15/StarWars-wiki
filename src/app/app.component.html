@@ -1,1 +1,26 @@
+<mat-toolbar class="toolbar">
+  <button
+    style="margin-right: 100px"
+    class="router-button"
+    mat-raised-button
+    matTooltip="Go to movies"
+    color="primary"
+    aria-label="Movies"
+    [routerLink]="['/movies']"
+  >
+    <mat-icon>movie</mat-icon>
+    Movies
+  </button>
+  <button
+    class="router-button"
+    mat-raised-button
+    matTooltip="Go to characters"
+    color="primary"
+    aria-label="Characters"
+    [routerLink]="['/characters']"
+  >
+    <mat-icon>person</mat-icon>
+    Characters
+  </button>
+</mat-toolbar>
 <router-outlet></router-outlet>
