@@ -8,7 +8,7 @@ import {environment} from "../../environments/environment";
 })
 export class MovieService {
 
-  endpoint = 'film/';
+  endpoint = 'films/';
 
   constructor(public http: HttpClient) {
   }
